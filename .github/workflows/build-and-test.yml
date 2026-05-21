@@ -19,7 +19,7 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore dependencies
-        run: dotnet restore Exercises10.sln
+        run: dotnet restore Exercises12.sln
 
       - name: Build
         run: dotnet build Exercises12.sln --configuration Release --no-restore
