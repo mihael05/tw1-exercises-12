@@ -32,7 +32,10 @@ namespace PokemonManagement.BL.Services
 
         public void Evolve(TrainerPokemon ownedPokemon)
         {
-            // TODO Implement
+            if (ownedPokemon.Pokemon?.EvolvesToId is null || ownedPokemon.Pokemon.EvolvesTo is null)
+            {
+                throw new PokemonLogicException("Pokemon cannot evolve");
+            }
         }
     }
 }
